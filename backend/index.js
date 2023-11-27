@@ -2,15 +2,17 @@ const express = require('express');
 const app = express();
 const port = 5000
 const db = require('./db/db')
+var cors=require("cors");
+app.use(cors());
 
 db();
 
-app.use((req,res,next)=>{
-    res.header("Access-Control-Allow-Origin","*");
-    res.header("Access-Control-Allow-Headers","*");
-    next(); 
+// app.use((req,res,next)=>{
+//     res.header("Access-Control-Allow-Origin","*");
+//     res.header("Access-Control-Allow-Headers","*");
+//     next(); 
 
-})
+// })
 
 app.get('/', (req, res) => {
     res.send('Hello World');
