@@ -11,7 +11,7 @@ const Home = () => {
     const [fooditem, setfooditem] = useState([])
 
     const loaddata = async () => {
-        var response = await fetch('http://localhost:5000/api/fooddata',
+        var response = await fetch('https://gofoodapp-cmei.onrender.com/api/fooddata',
             {
                 method: 'POST',
                 headers: {
